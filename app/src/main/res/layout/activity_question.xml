@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="400dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="@string/mark_to_save"
+        app:layout_constraintBottom_toTopOf="@+id/question1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_action_name" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182"
+        tools:text="question" />
+
+    <Button
+        android:id="@+id/question2"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/question4"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Q2"/>
+
+    <Button
+        android:id="@+id/question3"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/question4"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.972"
+        tools:text="Q3"
+        />
+
+    <Button
+        android:id="@+id/question1"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/question3"
+        app:layout_constraintEnd_toStartOf="@+id/question4"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Q1" />
+
+    <Button
+        android:id="@+id/question4"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.972"
+        tools:text="Q4"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
