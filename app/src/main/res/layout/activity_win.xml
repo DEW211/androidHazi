@@ -22,9 +22,10 @@
         android:id="@+id/newGameFromWin"
         android:layout_width="296dp"
         android:layout_height="75dp"
-        android:layout_marginTop="440dp"
+        android:layout_marginTop="388dp"
         android:text="@string/new_game"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,10 +33,10 @@
         android:id="@+id/backToMainFromWin"
         android:layout_width="296dp"
         android:layout_height="75dp"
-        android:layout_marginTop="548dp"
+        android:layout_marginTop="496dp"
         android:text="@string/bact_to_main"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

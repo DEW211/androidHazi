@@ -1,6 +1,7 @@
 package hu.bme.aut.triviapp;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -14,7 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.List;
+
 import adapter.CategoryRecyclerAdapter;
+import data.Category;
 
 public class CategorySelectActivity extends AppCompatActivity {
 
@@ -38,10 +42,19 @@ public class CategorySelectActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                categoryRecyclerAdapter.getItemCount();
+                List<Category> checkedCategories = categoryRecyclerAdapter.getCheckedCategories();
+                String[] categoryIDs = new String[checkedCategories.size()];
+                for(int i = 0; i < checkedCategories.size(); i++){
+                    categoryIDs[i] = checkedCategories.get(i).getId().toString();
+                }
+                Intent prevIntent = getIntent();
+                String difficulty = prevIntent.getStringExtra("difficulty");
                 Intent intent = new Intent(v.getContext(), QuestionActivity.class);
+                intent.putExtra("categories", categoryIDs);
+                intent.putExtra("difficulty", difficulty);
+                intent.putExtra("isnew", "1");
                 startActivity(intent);
+
             }
         });
 

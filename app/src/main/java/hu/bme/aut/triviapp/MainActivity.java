@@ -13,6 +13,7 @@ import fragments.DifficultyFragment;
 public class MainActivity extends AppCompatActivity implements DifficultyFragment.DifficultyFragmentInterface {
 
     private Button startGameButton;
+    private Button loadSavedButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +27,29 @@ public class MainActivity extends AppCompatActivity implements DifficultyFragmen
                 new DifficultyFragment().show(getSupportFragmentManager(), DifficultyFragment.TAG);
             }
         });
+
+        loadSavedButton = findViewById(R.id.btn_loadGame);
+
+        loadSavedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), QuestionActivity.class);
+                intent.putExtra("isnew", "0");
+                startActivity(intent);
+            }
+        });
+
     }
+
+
 
     @Override
     public void onOptionsFragmentResult(String difficulty) {
         //itt kell menteni valahova hogy milyen nehézség kell majd
         Intent intent = new Intent(this, CategorySelectActivity.class);
+        intent.putExtra("difficulty", difficulty);
+        String vmi = "1";
+        intent.putExtra("isnew", vmi);
         startActivity(intent);
     }
 }

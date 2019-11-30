@@ -6,25 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="400dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="84dp"
-        android:contentDescription="@string/mark_to_save"
-        app:layout_constraintBottom_toTopOf="@+id/question1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuestion"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_action_name" />
-
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="36sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +28,7 @@
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/question4"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="Q2"/>
+        tools:text="Q2" />
 
     <Button
         android:id="@+id/question3"
@@ -61,12 +48,26 @@
         android:id="@+id/question1"
         android:layout_width="190dp"
         android:layout_height="150dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/question3"
-        app:layout_constraintEnd_toStartOf="@+id/question4"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/question2"
         tools:text="Q1" />
+
+    <ImageButton
+        android:id="@+id/btnSave"
+        android:layout_width="400dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="@string/mark_to_save"
+        app:layout_constraintBottom_toTopOf="@+id/question1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion"
+        app:layout_constraintVertical_bias="0.871"
+        app:srcCompat="@drawable/ic_action_name" />
 
     <Button
         android:id="@+id/question4"
